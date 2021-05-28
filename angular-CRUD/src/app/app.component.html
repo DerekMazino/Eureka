@@ -27,6 +27,7 @@
               <input type="text" [(ngModel)] = "selectedEmpleado.country" placeholder="Ciudad" class="form-control">
             </div>
             <button (click)='addOrEdit()' class="btn btn-primary">Submit</button>
+            <button *ngIf="selectedEmpleado.id !== 0" class="btn btn-danger" (click)="detele()">Delete</button>
           </div>
         </div>
       </div>

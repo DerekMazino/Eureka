@@ -25,4 +25,11 @@ export class AppComponent {
   openEdit(empleado: Empleado){
     this.selectedEmpleado = empleado;
   }
+
+  detele(){
+    if(confirm('Estas seguro de querer eliminar este registro?')){
+      this.empleadoArray = this.empleadoArray.filter(x => x != this.selectedEmpleado);
+      this.selectedEmpleado = new Empleado();
+    }
+  }
 }
